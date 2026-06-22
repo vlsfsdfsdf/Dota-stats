@@ -1,13 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--text-muted);
+}
+
+ul {
+    list-style: none;
+}
+
 body {
     background-color: #131427;
 }
 
+header {
+  background-color: var(--bg-base);  
+
+}
+
+:root {
+  --bg-base: #0F0F0F;
+  --bg-card: #1A1A1A;
+  --bg-panel: #222222;
+  --accent-primary: #E8471A;
+  --accent-secondary: #F5A623;
+  --text-primary: #FFFFFF;
+  --text-muted: #8A8A8A;
+  --win: #4CAF50;
+  --loss: #E53935;
+  --radiant: #5DBE6E;
+  --dire: #C23B2E;
+  --border: #2A2A2A;
+}
+
+
 .dota-logo {
-    width: 400px;
-    height: 400px;
+    width: 70px;
+    height: 70px;
 
     background: #ff3b3b; /* любой цвет */
 
     -webkit-mask: url('/images/dota-logo-png.png') center/contain no-repeat;
     mask: url('/images/dota-logo-png.png') center/contain no-repeat;
+}
+
+
+/* Header */
+
+.header-left-container {
+display: flex;
+align-items: center;
+flex-direction: row;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    text-decoration: none;
+}
+
+.list-item {
+    text-decoration: none;
+    text-decoration: none;
 }
