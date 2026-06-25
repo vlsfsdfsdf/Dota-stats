@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dota stats online</title>
-    <link rel="stylesheet" href="/style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOTASTATS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <header>
-       <div class="header-left-container">
-         <div class="dota-logo" src="/images/dota-logo-png.png"></div>
-        <h2>DOTA<span>STATS</span></h2>
-        <nav>
-            <ul class="list">
-                <li class="c">OVERVIEW</li>
-                <li class="list-item">HEROES</li>
-                <li class="list-item">PLAYERS</li>
-                <li class="list-item">MATCHES</li>
-                <li class="list-item">META</li>
-            </ul>
-        </nav>
-       </div>
-       <input type="text" placeholder="Search hero or player...">
-    </header>
-    <section class="hero-section">
-        <div class="hero-section-right-container">
-            <h2>PATCH 7.41d</h2>
-            <h1>DOTA 2 STATISTICS</h1>
-            <p>Real-time match data across 4.2M games this patch. Hero win rates, player rankings,<br> and meta shifts updated every 15 minutes.</p>
-            <ul>
-                <li>2.4M MATCHES TODAY</li>
-                <li>890K ACTIVE PLAYERS</li>
-                <li>38:42 AVG DURATION</li>
-            </ul>
-        </div>
-        <div class="hero-section-left-container">
-            <!-- статистика винрейта за даер и за редиант -->
-        </div>
-        <section class="dashboards">
-            <div class="hero-winrate"></div>
-            <div class="leaderboard"></div>
-            <div class="meta-snapshot"></div>
-            <div class="role-distribution"></div>
-        </section>
-      
-    </section>
 
- <script type="module" src="src/main.js"></script>   
+<body>
+
+    <!-- ═══════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════ -->
+
+<header class="header">
+<div class="header__left">
+<div class="logo">
+  <svg class="logo__icon"></svg>
+  <h2 class="logo__text">DOTA<span class="logo__accent">STATS</span></h2>
+</div>
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item">OVERVIEW</li>
+    <li class="nav__item">HEROES</li>
+    <li class="nav__item">PLAYERS</li>
+    <li class="nav__item">MATCHES</li>
+    <li class="nav__item">META</li>
+  </ul>
+</nav>
+</div>
+
+<div class="header__right">
+  <div class="search">
+    <svg src="/images/search-img.svg" class="search__icon">
+      <use href="/images/symbol-defs.svg#icon-search"></use>
+    </svg>
+    <input class="search__input" type="text" placeholder="Search hero or player...">
+  </div>
+   <button class="live-btn">⬤ LIVE</button>
+</div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
