@@ -179,11 +179,12 @@ body {
 
 .hero__section {
   display: flex;
+  align-items: center;
   grid-template-columns: 1fr 380px;
   justify-content: space-around;
   gap: var(--space-lg);
   padding: var(--space-xl) var(--space-lg);
-  background: linear-gradient(135deg, #200c01 30%, #390101 35%, #330312 70%);
+  background: linear-gradient(135deg, #200c01 30%, #390101 35%, #320010 70%);
 }
 
 .hero__patch {
@@ -272,4 +273,15 @@ body {
   font-size: 9px;
   color: var(--color-text-muted);
   font-family: var(--font-mono);
+}
+
+/*  */
+
+
+.panel-title__icon {
+  fill: none;
+  stroke: var(--color-amber);
+  stroke-width: 4;
+  width: 20px;
+  height: 20px;
 }
