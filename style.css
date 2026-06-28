@@ -63,7 +63,7 @@ body {
   align-items: center;
   justify-content: space-around;
   height: 56px;
-  
+
   background-color: var(--color-bg-card);
   border-bottom: 1px solid var(--color-border);
   position: sticky;
@@ -229,7 +229,6 @@ body {
   width: 20px;
   fill: var(--color-amber);
   stroke-width: 0.7;
-
 }
 
 .stat__value {
@@ -275,13 +274,285 @@ body {
   font-family: var(--font-mono);
 }
 
-/*  */
-
+/* ═══════════════════════════════════════════
+   DASHBOARD
+═══════════════════════════════════════════ */
 
 .panel-title__icon {
-  fill: none;
+  fill: var(--color-amber);
   stroke: var(--color-amber);
-  stroke-width: 4;
-  width: 20px;
-  height: 20px;
+  stroke-width: 1.3;
+  width: 30px;
+  height: 25px;
 }
+
+.dashboard {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+
+.dashboard__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.dashboard__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ═══════════════════════════════════════════
+   PANEL — базовая карточка
+═══════════════════════════════════════════ */
+.panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.panel__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-text-muted);
+}
+
+.panel__title-icon {
+  font-size: 14px;
+  color: var(--color-amber);
+}
+
+/* Toggle */
+.toggle {
+  display: flex;
+}
+
+.toggle__btn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.toggle__btn:first-child {
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.toggle__btn:last-child {
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.toggle__btn--active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+/* ═══════════════════════════════════════════
+   HERO ROW
+═══════════════════════════════════════════ */
+.hero-row {
+  display: grid;
+  grid-template-columns: 20px 48px 1fr 26px 120px 150px;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border: 1px solid var(--color-border);
+  padding: 10px;
+}
+
+.hero-row:last-child {
+  border-bottom: none;
+}
+
+.hero-row__num {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.hero-row__img {
+  width: 48px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  background: url("/images/ES.png") center/cover no-repeat;
+}
+
+.hero-row__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-row__name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero-row__role {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.badge {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge--s {
+  background: var(--color-tier-s);
+  color: white;
+}
+.badge--a {
+  background: var(--color-tier-a);
+  color: white;
+}
+.badge--b {
+  background: var(--color-tier-b);
+  color: white;
+}
+.badge--c {
+  background: var(--color-tier-c);
+  color: white;
+}
+
+.hero-row__stats {
+display: flex;
+gap: 15px;
+}
+
+.hero-row__wr {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-row__wr--up      { color: var(--color-win); }
+.hero-row__wr--down    { color: var(--color-loss); }
+.hero-row__wr--neutral { color: var(--color-text-muted); }
+
+.hero-row__pick {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-row__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-row__games {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.hero-row__bar {
+  height: 5px;
+  width: 100%;
+  background: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hero-row__bar-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+
+.hero-row__bar-fill--high   { background: var(--color-win); }  /* >52% */
+.hero-row__bar-fill--mid    { background: var(--color-amber); } /* 49-52% */
+.hero-row__bar-fill--low    { background: var(--color-loss); }  /* <49% */
+
+/* ═══════════════════════════════════════════
+   ROLE DISTRIBUTION
+═══════════════════════════════════════════ */
+
+
+
+.role-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  height: 100px;
+  justify-content: flex-end;
+}
+
+.role-col__percent {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text);
+}
+
+.role-col__label {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.role-col__bar {
+  width: 100%;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.role-col__carry    { background-color: var(--color-loss); }
+.role-col__bar--mid      { background-color: var(--color-amber); }
+.role-col__bar--offlane  { background-color: var(--color-win); }
+.role-col__bar--softsupp { background-color: #2196F3; }
+.role-col__bar--hardsupp { background-color: #9C27B0; }
+
+.panel-title__area {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.panel-title__icon {
+  width: 25px;
+  height: 25px;
+  fill: var(--color-amber);
+}
+
+.role-col__label {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════════
+   LEADERBOARD
+═══════════════════════════════════════════ */
+
+
